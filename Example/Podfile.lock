@@ -1,0 +1,25 @@
+PODS:
+  - Alamofire (4.7.3)
+  - DynamicGallery (0.1.0):
+    - Alamofire (~> 4.7)
+    - Kingfisher (~> 4.0)
+    - SnapKit (~> 4.0.0)
+  - Kingfisher (4.8.1)
+  - SnapKit (4.0.0)
+
+DEPENDENCIES:
+  - DynamicGallery (from `../`)
+
+EXTERNAL SOURCES:
+  DynamicGallery:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  DynamicGallery: 54970bae53e46da9c2f62a333598608dff511ec1
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+
+PODFILE CHECKSUM: 3a6247cb08d873b57249303caf940e43dc6b6efe
+
+COCOAPODS: 1.4.0

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DynamicGallery_Example' do
+  pod 'DynamicGallery', :path => '../'
+
+  target 'DynamicGallery_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
