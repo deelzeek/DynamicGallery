@@ -8,6 +8,6 @@
 import Foundation
 
 public protocol DynamiceGalleryPhoto {
-    var author: String { get set }
-    var originalImageAddress: URL { get }
+    var footerLabelText: String { get }
+    var imageAddress: URL { get }
 }

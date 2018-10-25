@@ -28,7 +28,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Classes/**/*.{h,m,swift}'
   s.dependency 'SnapKit', '~> 4.0.0'
-  s.dependency 'Alamofire', '~> 4.7'
   s.dependency 'Kingfisher', '~> 4.0'
   s.swift_version = '4.0'
   

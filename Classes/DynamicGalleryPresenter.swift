@@ -43,7 +43,7 @@ final class DynamicGalleryPresenter: NSObject, PresenterProtocol {
         
         //self.view.authorLabel?.text = photo.author
         self.updateViewValue()
-        self.setImage(for: self.view.imageView, url: photo.originalImageAddress)
+        self.setImage(for: self.view.imageView, url: photo.imageAddress)
         
         /// Add one more imageview by default
         if startingNumber > 0 {
@@ -56,6 +56,9 @@ final class DynamicGalleryPresenter: NSObject, PresenterProtocol {
         
         // If there is not internet connection, then prevent adding any imageview
         if !isInternetAvailable() { return }
+        
+        // Check if the image is the one before the last
+        if !self.view.photos.indices.contains(self.view.numberInArray + position) { return }
         
         let imageView = UIZoomableImageView()
         self.view.scrollView?.addSubview(imageView)
@@ -75,7 +78,7 @@ final class DynamicGalleryPresenter: NSObject, PresenterProtocol {
         imageView.delegate = self
         
         // Set image to download
-        let resource = self.view.photos[self.view.numberInArray + position].originalImageAddress
+        let resource = self.view.photos[self.view.numberInArray + position].imageAddress
         self.setImage(for: imageView, url: resource)
         
         // Add to array
@@ -138,7 +141,7 @@ final class DynamicGalleryPresenter: NSObject, PresenterProtocol {
             return
         }
         
-        let authorName = self.view.photos[self.view.numberInArray + currentPosition - 1].author
+        let authorName = self.view.photos[self.view.numberInArray + currentPosition - 1].footerLabelText
         self.view.authorLabel?.text = authorName
     }
     
