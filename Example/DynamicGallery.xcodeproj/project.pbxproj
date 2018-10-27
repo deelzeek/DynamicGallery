@@ -32,6 +32,7 @@
 /* Begin PBXFileReference section */
 		04A266B42182030A00AA912F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		04A266B621820B0300AA912F /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		04B2385A2184D7910051307E /* DynamicGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DynamicGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C030CEF96E14A428BC820BD /* Pods-DynamicGallery_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicGallery_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-DynamicGallery_Example/Pods-DynamicGallery_Example.release.xcconfig"; sourceTree = "<group>"; };
 		36AEF8A07E6BD43D8C63535D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		4339F1D6AD785F18CA30D477 /* DynamicGallery.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DynamicGallery.podspec; path = ../DynamicGallery.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -167,6 +168,7 @@
 		E684D9C47BA7BDB2AF1E81AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04B2385A2184D7910051307E /* DynamicGallery.framework */,
 				92CB83CD59629281134AC24C /* Pods_DynamicGallery_Example.framework */,
 				9DCFC8AECFA3E84573B64BBA /* Pods_DynamicGallery_Tests.framework */,
 			);
@@ -337,14 +339,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DynamicGallery_Example/Pods-DynamicGallery_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicGallery/DynamicGallery.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicGallery.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",

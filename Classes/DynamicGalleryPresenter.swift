@@ -46,7 +46,7 @@ final class DynamicGalleryPresenter: NSObject, PresenterProtocol {
         self.setImage(for: self.view.imageView, url: photo.imageAddress)
         
         /// Add one more imageview by default
-        if startingNumber > 0 {
+        if startingNumber >= 0 {
             self.addImageView(at: self.currentPosition + 1)
         }
     }
@@ -58,7 +58,7 @@ final class DynamicGalleryPresenter: NSObject, PresenterProtocol {
         if !isInternetAvailable() { return }
         
         // Check if the image is the one before the last
-        if !self.view.photos.indices.contains(self.view.numberInArray + position) { return }
+        if !self.view.photos.indices.contains(self.view.numberInArray + position - 1) { return }
         
         let imageView = UIZoomableImageView()
         self.view.scrollView?.addSubview(imageView)
@@ -78,7 +78,7 @@ final class DynamicGalleryPresenter: NSObject, PresenterProtocol {
         imageView.delegate = self
         
         // Set image to download
-        let resource = self.view.photos[self.view.numberInArray + position].imageAddress
+        let resource = self.view.photos[self.view.numberInArray + position - 1].imageAddress
         self.setImage(for: imageView, url: resource)
         
         // Add to array

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DynamicGallery'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'DynamicGallery is a library used to crate slideshow dynamically by downloading and adding images in a sequence.'
 
 # This description is used to generate tags and improve search results.
